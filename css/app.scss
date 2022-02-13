@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$w100 : 100%;
+$black : #000;
+$white : #fff;
+$fontSizeNumber : 30px;
+$radius : 50%;
+$fontFamily: 'Poppins', sans-serif;
+
+body{
+    background-image: linear-gradient(rgb(131, 188, 248),rgb(168, 183, 184));
+    font-family: $fontFamily;
+    h1{
+        text-align: center;
+    }
+}
+
+.stc{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+
+    #title em{
+        color: #0d86d6;
+        cursor: pointer;
+    }
+    .ball{
+        background-image: linear-gradient(230deg,rgb(73, 75, 75) 10%, rgb(19, 19, 19) 74%);
+        width: 300px;
+        height: 300px;
+        border-radius: $radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    
+        .ball__ctn{
+            background-image: linear-gradient(230deg,#e9e9e9 30%, #dfdfdf 50%);
+            width: 160px;
+            height: 160px;
+            border-radius: $radius;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid $black;
+            overflow: hidden;
+           
+    
+            .ball__ctn--value{
+                color: $black;
+                font-size: $fontSizeNumber*2;
+                font-weight: bold;
+                transition: 0.5s all ease;
+                // animation: maquina 0.15s infinite ease;  
+ 
+                
+            }
+            span{
+                font-size: $fontSizeNumber/1;
+            }
+        }
+    }
+
+    .ball__modal{
+        
+        position: absolute;
+        padding: 70px;
+        height: 20%;
+        background-color: rgba(230, 230, 230, 0.987);
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        .ball__modal--ans{
+            padding: 2px;
+            font-size: clamp($fontSizeNumber/3,6vw,$fontSizeNumber*1.3);   
+
+            em{
+                font-size: clamp(14px,6vw,18px);
+                color: #0d86d6;
+
+            }
+        }
+
+    }
+}
+
+
+@keyframes maquina {
+    0%{
+        transform: translateY(-110%);
+    }
+    100%{
+        transform: translateY(110%);
+    }
+} 
+    
+
+@keyframes regresar {
+    0%{
+        transform: translateY(110%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

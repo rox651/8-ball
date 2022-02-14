@@ -16,6 +16,17 @@ body h1 {
   text-align: center;
 }
 
+.texBlue, .stc #title #click, .stc .ball__modal .ball__modal--ans em {
+  color: #0d86d6;
+  cursor: pointer;
+  -webkit-transition: .3s color ease;
+  transition: .3s color ease;
+}
+
+.texBlue:hover, .stc #title #click:hover, .stc .ball__modal .ball__modal--ans em:hover {
+  color: #36acfa;
+}
+
 .stc {
   position: relative;
   width: 100%;
@@ -23,11 +34,6 @@ body h1 {
   display: -ms-grid;
   display: grid;
   place-items: center;
-}
-
-.stc #title em {
-  color: #0d86d6;
-  cursor: pointer;
 }
 
 .stc .ball {
@@ -92,12 +98,11 @@ body h1 {
 
 .stc .ball__modal .ball__modal--ans {
   padding: 2px;
-  font-size: clamp(10px, 6vw, 39px);
+  font-size: clamp(10px, 5vw, 39px);
 }
 
 .stc .ball__modal .ball__modal--ans em {
   font-size: clamp(14px, 6vw, 18px);
-  color: #0d86d6;
 }
 
 @-webkit-keyframes maquina {
@@ -124,8 +129,8 @@ body h1 {
 
 @-webkit-keyframes regresar {
   0% {
-    -webkit-transform: translateY(110%);
-            transform: translateY(110%);
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -135,8 +140,8 @@ body h1 {
 
 @keyframes regresar {
   0% {
-    -webkit-transform: translateY(110%);
-            transform: translateY(110%);
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
   }
   100% {
     -webkit-transform: translateY(0%);

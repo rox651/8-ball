@@ -35,7 +35,7 @@ let iterador = 0;
         //cuando el iterador llegue a 10 se plasmará la respuesta aleatoria en el modal
         if(iterador == 45){
             clearInterval(temporizador);
-            value.style.animation = 'regresar .5s ease-in';
+            value.style.animation = 'regresar .5s ease-out';
             value.style.color = "#0d86d6";
             const answers ={
                 8: 'Sin lugar a dudas',
@@ -53,13 +53,15 @@ let iterador = 0;
             let eightBall = answers[randomNumber] || defaultAnswer;
                 setTimeout(() => {
                     ballModal.style.display = "flex";
-                    ballModalAns.innerHTML = eightBall + "<br> <em>Reinicia para volver a preguntar</em>";
+                    ballModalAns.innerHTML = eightBall + "<br> <em>Dale aqui para volver a preguntar</em>";
                 }, 1500);
         }
     }, 150);
 
 
-
+    ballModalAns.addEventListener('click',()=>{
+        window.location.reload();
+    })
 
 
 })

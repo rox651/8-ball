@@ -33,7 +33,7 @@ let iterador = 0;
         value.style.animation = `maquina 0.09s infinite ease`;
         
         //cuando el iterador llegue a 10 se plasmará la respuesta aleatoria en el modal
-        if(iterador == 30){
+        if(iterador == 45){
             clearInterval(temporizador);
             value.style.animation = 'regresar .5s ease-out';
             value.style.color = "#0d86d6";
